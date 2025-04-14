@@ -255,7 +255,7 @@
       "y": 0
     },
     "_angularVelocity": 0,
-    "_fixedRotation": false,
+    "_fixedRotation": true,
     "_id": ""
   },
   {
@@ -344,7 +344,7 @@
     "__prefab": {
       "__id__": 17
     },
-    "explodeTime": 1000,
+    "explodeTime": 1500,
     "player": null,
     "explosionModal": {
       "__uuid__": "69681e2f-c2ab-4310-9734-d69694f44816",

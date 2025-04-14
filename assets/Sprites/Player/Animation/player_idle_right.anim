@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.AnimationClip",
-    "_name": "player_idle",
+    "_name": "player_idle_right",
     "_objFlags": 0,
     "__editorExtras__": {
       "embeddedPlayerGroups": []
@@ -67,15 +67,15 @@
     ],
     "_values": [
       {
-        "__uuid__": "156a4984-5d48-490b-850a-ecd1641f6434@6f703",
+        "__uuid__": "156a4984-5d48-490b-850a-ecd1641f6434@88761",
         "__expectedType__": "cc.SpriteFrame"
       },
       {
-        "__uuid__": "156a4984-5d48-490b-850a-ecd1641f6434@49f70",
+        "__uuid__": "156a4984-5d48-490b-850a-ecd1641f6434@93f59",
         "__expectedType__": "cc.SpriteFrame"
       },
       {
-        "__uuid__": "156a4984-5d48-490b-850a-ecd1641f6434@6f703",
+        "__uuid__": "156a4984-5d48-490b-850a-ecd1641f6434@88761",
         "__expectedType__": "cc.SpriteFrame"
       }
     ]

@@ -36,7 +36,7 @@ export class Explosion extends Component {
     contact: IPhysics2DContact | null
   ) {
     if (otherCollider.node.name === "Body") {
-      const player = otherCollider.node.getParent().getComponent(playerCtrl);
+      const player = otherCollider.node.getComponent(playerCtrl);
       if (player) {
         player.onBeingHit();
       }

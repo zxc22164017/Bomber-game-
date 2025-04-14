@@ -20,7 +20,6 @@ const KICKFORCE = 4;
 @ccclass("bomb")
 export class bomb extends Component {
   private isExplode = false;
-  private kickedCount = 0;
 
   @property({ type: CCInteger })
   explodeTime = 500;
@@ -60,20 +59,17 @@ export class bomb extends Component {
     contact: IPhysics2DContact | null
   ) {
     if (otherCollider.node.name === "Body") {
-      this.kickedCount++;
-      if (this.kickedCount > 1) {
-        const rigidBody = this.getComponentInChildren(RigidBody2D);
-        const contactInfo = contact.getWorldManifold();
-        const { xSpeed, ySpeed } = otherCollider.node
-          .getParent()
-          .getComponent(playerCtrl)
-          .getSpeeds();
-        rigidBody.applyLinearImpulse(
-          new Vec2(xSpeed * KICKFORCE, ySpeed * KICKFORCE),
-          contactInfo.points[0],
-          true
-        );
-      }
+      const rigidBody = this.getComponentInChildren(RigidBody2D);
+      const contactInfo = contact.getWorldManifold();
+      const { xSpeed, ySpeed } = otherCollider.node
+        .getComponent(playerCtrl)
+        .getSpeeds();
+
+      rigidBody.applyLinearImpulse(
+        new Vec2(xSpeed * KICKFORCE, ySpeed * KICKFORCE),
+        contactInfo.points[0],
+        true
+      );
     }
   }
 }
